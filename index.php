@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<!--[if IE 9 ]><html class="ie9"><![endif]-->
-<html>
+<?php
+$current_page = "index.php";
+?>
+    <!DOCTYPE html>
+    <!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <html>
     <?php require_once ("include/head.php"); ?>
+
     <body>
         <?php require_once ("include/header.php"); ?>
 
         <section id="main">
             <?php require_once("include/sidebar.php"); ?>
-            
+
             <section id="content">
                 <div class="container">
                     <div class="block-header">
@@ -17,35 +21,13 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <h2>Sales Statistics <small>Vestibulum purus quam scelerisque, mollis nonummy metus</small></h2>
+                            <h2>Airport Statistics <small>There are real-time updated from FireBase</small></h2>
 
                             <ul class="actions">
                                 <li>
                                     <a href="">
                                         <i class="zmdi zmdi-refresh-alt"></i>
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <i class="zmdi zmdi-download"></i>
-                                    </a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="" data-toggle="dropdown">
-                                        <i class="zmdi zmdi-more-vert"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li>
-                                            <a href="">Change Date Range</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Change Graph Type</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Other Settings</a>
-                                        </li>
-                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -200,285 +182,16 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6">
-                            <!-- Recent Items -->
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>Recent Items <small>Phasellus condimentum ipsum id auctor imperdie</small></h2>
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
 
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Settings</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Other Settings</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
 
-                                <div class="card-body m-t-0">
-                                    <table class="table table-inner table-vmiddle">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Name</th>
-                                                <th style="width: 60px">Price</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="f-500 c-cyan">2569</td>
-                                                <td>Samsung Galaxy Mega</td>
-                                                <td class="f-500 c-cyan">$521</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="f-500 c-cyan">9658</td>
-                                                <td>Huawei Ascend P6</td>
-                                                <td class="f-500 c-cyan">$440</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="f-500 c-cyan">1101</td>
-                                                <td>HTC One M8</td>
-                                                <td class="f-500 c-cyan">$680</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="f-500 c-cyan">6598</td>
-                                                <td>Samsung Galaxy Alpha</td>
-                                                <td class="f-500 c-cyan">$870</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="f-500 c-cyan">4562</td>
-                                                <td>LG G3</td>
-                                                <td class="f-500 c-cyan">$690</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div id="recent-items-chart" class="flot-chart"></div>
-                            </div>
-
-                            <!-- Todo -->
-                            <div id="todo" class="card card-light">
-                                <div class="card-header ch-alt">
-                                    <h2>Todo Lists <small>Add, edit and manage your Todo Lists</small></h2>
-                                </div>
-
-                                <div class="card-body card-padding">
-                                    <div class="t-add">
-                                        <i class="ta-btn zmdi zmdi-plus" data-ma-action="todo-form-open"></i>
-
-                                        <div class="ta-block">
-                                            <textarea placeholder="What you want to do..."></textarea>
-
-                                            <div class="tab-actions">
-                                                <a data-ma-action="todo-form-close" href="" class="c-red"><i class="zmdi zmdi-close"></i></a>
-                                                <a data-ma-action="todo-form-close" href="" class="c-green"><i class="zmdi zmdi-check"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="list-group">
-                                        <div class="list-group-item media">
-                                            <div class="pull-right">
-                                                <ul class="actions actions-alt">
-                                                    <li class="dropdown">
-                                                        <a href="" data-toggle="dropdown">
-                                                            <i class="zmdi zmdi-more-vert"></i>
-                                                        </a>
-
-                                                        <ul class="dropdown-menu dropdown-menu-right">
-                                                            <li><a href="">Delete</a></li>
-                                                            <li><a href="">Archive</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="checkbox checkbox-light">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i class="input-helper"></i>
-                                                        <span>
-                                                            Duis vitae nibh molestie pharetra augue vitae
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-group-item media">
-                                            <div class="pull-right">
-                                                <ul class="actions actions-alt">
-                                                    <li class="dropdown">
-                                                        <a href="" data-toggle="dropdown">
-                                                            <i class="zmdi zmdi-more-vert"></i>
-                                                        </a>
-
-                                                        <ul class="dropdown-menu dropdown-menu-right">
-                                                            <li><a href="">Delete</a></li>
-                                                            <li><a href="">Archive</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="checkbox checkbox-light">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i class="input-helper"></i>
-                                                        <span>
-                                                            Duis vitae nibh molestie pharetra augue vitae
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-group-item media">
-                                            <div class="pull-right">
-                                                <ul class="actions actions-alt">
-                                                    <li class="dropdown">
-                                                        <a href="" data-toggle="dropdown">
-                                                            <i class="zmdi zmdi-more-vert"></i>
-                                                        </a>
-
-                                                        <ul class="dropdown-menu dropdown-menu-right">
-                                                            <li><a href="">Delete</a></li>
-                                                            <li><a href="">Archive</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="checkbox checkbox-light">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i class="input-helper"></i>
-                                                        <span>
-                                                            In vel imperdiet leoorbi mollis leo sit amet quam fringilla varius mauris orci turpis
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-group-item media">
-                                            <div class="pull-right">
-                                                <ul class="actions actions-alt">
-                                                    <li class="dropdown">
-                                                        <a href="" data-toggle="dropdown">
-                                                            <i class="zmdi zmdi-more-vert"></i>
-                                                        </a>
-
-                                                        <ul class="dropdown-menu dropdown-menu-right">
-                                                            <li><a href="">Delete</a></li>
-                                                            <li><a href="">Archive</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="checkbox checkbox-light">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i class="input-helper"></i>
-                                                        <span>
-                                                            Suspendisse quis sollicitudin erosvel dictum nunc
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-group-item media">
-                                            <div class="pull-right">
-                                                <ul class="actions actions-alt">
-                                                    <li class="dropdown">
-                                                        <a href="" data-toggle="dropdown">
-                                                            <i class="zmdi zmdi-more-vert"></i>
-                                                        </a>
-
-                                                        <ul class="dropdown-menu dropdown-menu-right">
-                                                            <li><a href="">Delete</a></li>
-                                                            <li><a href="">Archive</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="checkbox checkbox-light">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i class="input-helper"></i>
-                                                        <span>
-                                                            Curabitur egestas finibus sapien quis faucibusras bibendum ut justo at sagittis. In hac habitasse platea dictumst
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-group-item media">
-                                            <div class="pull-right">
-                                                <ul class="actions actions-alt">
-                                                    <li class="dropdown">
-                                                        <a href="" data-toggle="dropdown">
-                                                            <i class="zmdi zmdi-more-vert"></i>
-                                                        </a>
-
-                                                        <ul class="dropdown-menu dropdown-menu-right">
-                                                            <li><a href="">Delete</a></li>
-                                                            <li><a href="">Archive</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="checkbox checkbox-light">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i class="input-helper"></i>
-                                                        <span>
-                                                            Suspendisse potenti. Cras dolor augue, tincidunt sit amet lorem id, blandit rutrum libero
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
                             <!-- Calendar -->
-                            <div class="card" id="calendar-widget">
-                                <div class="card-header bgm-teal">
-                                    <div class="cwh-year"></div>
-                                    <div class="cwh-day"></div>
 
-                                    <button class="bgm-lightgreen btn btn-default bg btn-float"><i class="zmdi zmdi-plus"></i></button>
-                                </div>
-
-                                <div class="card-body card-padding-sm">
-                                    <div id="cw-body"></div>
-                                </div>
-                            </div>
 
                             <!-- Recent Posts -->
                             <div class="card">
                                 <div class="card-header">
-                                    <h2>Recent Posts <small>Phasellus condimentum ipsum id auctor imperdie</small></h2>
+                                    <h2>Recent Announcements <small>Phasellus condimentum ipsum id auctor imperdie</small></h2>
                                     <ul class="actions">
                                         <li>
                                             <a href="">
@@ -567,89 +280,13 @@
             </section>
         </section>
 
-        <footer id="footer">
-            Copyright &copy; 2015 Material Admin
+        <?php require_once("include/footer.php"); ?>
 
-            <ul class="f-menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">Dashboard</a></li>
-                <li><a href="">Reports</a></li>
-                <li><a href="">Support</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </footer>
+        <?php require_once("include/preloader.php"); ?>
 
-        <!-- Page Loader -->
-        <div class="page-loader">
-            <div class="preloader pls-blue">
-                <svg class="pl-circular" viewBox="25 25 50 50">
-                    <circle class="plc-path" cx="50" cy="50" r="20" />
-                </svg>
+        <?php require_once("include/old_ie.php"); ?>
 
-                <p>Please wait...</p>
-            </div>
-        </div>
-
-        <!-- Older IE warning message -->
-        <!--[if lt IE 9]>
-            <div class="ie-warning">
-                <h1 class="c-white">Warning!!</h1>
-                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-                <div class="iew-container">
-                    <ul class="iew-download">
-                        <li>
-                            <a href="http://www.google.com/chrome/">
-                                <img src="img/browsers/chrome.png" alt="">
-                                <div>Chrome</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.mozilla.org/en-US/firefox/new/">
-                                <img src="img/browsers/firefox.png" alt="">
-                                <div>Firefox</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.opera.com">
-                                <img src="img/browsers/opera.png" alt="">
-                                <div>Opera</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.apple.com/safari/">
-                                <img src="img/browsers/safari.png" alt="">
-                                <div>Safari</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                                <img src="img/browsers/ie.png" alt="">
-                                <div>IE (New)</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <p>Sorry for the inconvenience!</p>
-            </div>
-        <![endif]-->
-
-        <!-- Javascript Libraries -->
-        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <script src="vendors/bower_components/flot/jquery.flot.js"></script>
-        <script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
-        <script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
-        <script src="vendors/sparklines/jquery.sparkline.min.js"></script>
-        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-
-        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
-        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js "></script>
-        <script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
-        <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
-        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
-        <script src="vendors/bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
-        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <?php require_once("include/js.php"); ?>
 
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
@@ -657,5 +294,76 @@
         <![endif]-->
 
         <script src="js/app.min.js"></script>
+
+        <script>
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                console.log("Not able to Detect the Location");
+            }
+
+
+            function showPosition(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+                $.ajax("get_weather.php?lat=" + latitude + "&long=" + longitude)
+                    .done(function(result) {
+                        var result_object = JSON.parse(result);
+                        var current_response = result_object.currently;
+                        var current_icon = current_response.icon;
+                        var current_temp = current_response.apparentTemperature;
+                        $(".weather-status").html(parseInt(current_temp) + "°F");
+                        var current_summary = current_response.summary;
+                        $(".currently").html(current_summary);
+                        $(".weather-info :first-child").remove();
+                        $(".weather-widget .weather-icon").removeClass("wi-23").addClass("wi-"+get_whether_icon(current_icon));
+                        var next_high = result_object.daily.data[0].temperatureMax;
+                        var next_low = result_object.daily.data[0].temperatureMin;
+                        var next_icon = result_object.daily.data[0].icon;
+                        var next_next_high = result_object.daily.data[0].temperatureMax;
+                        var next_next_low = result_object.daily.data[0].temperatureMin;
+                        var next_next_icon = result_object.daily.data[0].icon;
+                        var weather_list_tomorrow = "<span class=\"weather-list-icon wi-32\"></span><span>78/64</span><span>Thunderstorms</span>";
+                    });
+            }
+
+            function get_whether_icon(icon) {
+            var icon_number = 0;
+            switch (icon) {
+                case "clear-day":
+                    icon_number = 25;
+                    break;
+                case "clear-night":
+                    icon_number = 33;
+                    break;
+                case "rain":
+                    icon_number = 3;
+                    break;
+                case "snow":
+                    icon_number = 3;
+                    break;
+                case "sleet":
+                    icon_number = 16;
+                    break;
+                case "wind":
+                    icon_number = 25;
+                    break;
+                case "fog":
+                    icon_number = 14;
+                    break;
+                case "cloudy":
+                    icon_number = 26;
+                    break;
+                case "partly-cloudy-day":
+                    icon_number = 44;
+                    break;
+                case "partly-cloudy-night":
+                    icon_number = 44;
+                    break;
+            }
+            }
+
+        </script>
     </body>
-  </html>
+
+    </html>
